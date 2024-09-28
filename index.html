@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Matrix Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Matrix Calculator</h1>
+
+    <div class="size-input">
+      <label for="matrixSize">Matrix Size:</label>
+      <input type="number" id="matrixSize" min="2" max="5" value="2">
+      <button onclick="generateMatrices()">Generate Matrices</button>
+    </div>
+
+    <div class="matrix-container">
+      <div id="matrixA" class="matrix">
+        <h2>Matrix A</h2>
+        <!-- Matrix A inputs will be generated here -->
+      </div>
+      <div id="matrixB" class="matrix">
+        <h2>Matrix B</h2>
+        <!-- Matrix B inputs will be generated here -->
+      </div>
+    </div>
+
+    <div class="operations">
+      <button onclick="performOperation('add')">Add</button>
+      <button onclick="performOperation('subtract')">Subtract</button>
+      <button onclick="performOperation('multiply')">Multiply</button>
+      <button onclick="calculateDeterminant('A')">Det(A)</button>
+      <button onclick="calculateDeterminant('B')">Det(B)</button>
+    </div>
+
+    <div id="error" class="error" style="display: none;"></div>
+
+    <div id="result" class="result">
+      <h2>Result</h2>
+      <div id="resultMatrix"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
